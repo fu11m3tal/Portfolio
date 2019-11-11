@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import NavigationBar from './NavigationBar.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +12,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Welcome</h1>
+        <NavigationBar/>
+        <h4>Hello my name is Steven.</h4>
+        <h1>I build things for the web.</h1>
       </div>
     )
   }
