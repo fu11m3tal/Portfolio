@@ -1,15 +1,16 @@
 import React from 'react';
 
-const NavigationBar = () => {
+const NavigationBar = (props) => {
   return(
-    <div className="navContainer">
-      <nav>
-        <a href="/html/">About</a> |
-        <a href="/css/">Experience</a> |
-        <a href="/js/">Work</a> |
-        <a href="/jquery/">Contact</a>
-      </nav>
-      <button>Resume</button>
+    <div className="nav-container">
+      <div className="nav-bar">
+        <a className="active" href="#home">Home</a> 
+        <a href="/about/">About</a> 
+        <a href="/experience/">Experience</a> 
+        <a href="/work/">Work</a> 
+        <a href="/contact/">Contact</a>
+        <a href="/resume/">Resume</a>
+      </div>
     </div>
   )
 }
