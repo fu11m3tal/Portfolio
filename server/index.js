@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
 app.get('/resume/', controller.getResume);
+
+app.get('/linkedin/', controller.getLinkedIn)
 // app.get('/api/account/', controller.getAllAccount);
 // app.post('/workouts', controller.postWorkout);
 // app.put('/workouts');
