@@ -15,13 +15,11 @@ class App extends React.Component {
       <div className="app">
         <NavigationBar/>
         <SideBar/>
-        <div className="main-container">
-          <h4>Hello my name is</h4>
-          <br></br>
-          <h1>Steven Christopher Yoh.</h1>
-          <h1>I love building beautiful and intuitive UI.</h1>
-          <h3>Please explore!</h3>
-        </div>
+        <div className="about" name="about">About</div>
+        <div className="experience" name="experience">Experience</div>
+        <div className="work" name="work">Work</div>
+        <div className="contact" name="contact">Contact</div>
+        <a className="resume" name="resume">Resume</a>
       </div>
     )
   }

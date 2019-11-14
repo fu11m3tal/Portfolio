@@ -13,7 +13,11 @@ body {
   .app    { flex: 3 0px; }
   .nav-container { order: 1; } 
   .side-container { order: 2; }
-  .main-container { order: 3 } 
+  .about { order: 3 } 
+  .experience  { order: 4}
+  .work  { order: 5}
+  .contact  { order: 6}
+  .resume  { order: 7}
 }
 
 @media all and (min-width: 600px) {
@@ -37,8 +41,8 @@ body {
 }
 
 .side-container {
-  height: 50%;
-  width: 10%;
+  height: 40%;
+  width: 7%;
   position: fixed;
   padding-top: 25%;
   padding-bottom: 25%;
@@ -50,23 +54,64 @@ body {
 }
 
 .main-container {
-  height: 100%;
-  width: 90%;
+  
+}
+
+.about {
+  height: 500px;
+  width: 93%;
   display: flex;
   float: right;
   padding: 0%;
-  color:  white;
+  background-color: transparent;
+  border-color: black;
+  border-style: solid;
 }
 
-h4 {
-  order: 1;
+.experience {
+  height: 500px;
+  width: 93%;
+  display: flex;
+  float: right;
+  padding: 0%;
+  background-color: transparent;
+  border-color: black;
+  border-style: solid;
 }
-h1 {
-  order: 2;
+
+.work {
+  height: 500px;
+  width: 93%;
+  display: flex;
+  float: right;
+  padding: 0%;
+  background-color: transparent;
+  border-color: black;
+  border-style: solid;
 }
-h3 {
-  order: 3;
+
+.contact {
+  height: 500px;
+  width: 93%;
+  display: flex;
+  float: right;
+  padding: 0%;
+  background-color: transparent;
+  border-color: black;
+  border-style: solid;
 }
+
+.resume {
+  height: 500px;
+  width: 93%;
+  display: flex;
+  float: right;
+  padding: 0%;
+  background-color: transparent;
+  border-color: black;
+  border-style: solid;
+}
+
 /* NAVIGATION BAR STYLING */
 .nav-bar {
   display: flex;
