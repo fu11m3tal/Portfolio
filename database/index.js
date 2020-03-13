@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fitness', { useUnifiedTopology: true },  { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/fitness', { useUnifiedTopology: true, useNewUrlParser: true })
 
 const db = mongoose.connection;
 
