@@ -1,10 +1,8 @@
 import React from 'react';
 
-const Contact = () => {
+const Contact = (props) => {
   return(
-    <div>
-      
-    </div>
+    <a className="contact" name="contact">Contact</a>
   )
 }
   

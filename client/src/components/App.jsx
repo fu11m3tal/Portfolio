@@ -3,6 +3,12 @@ import axios from 'axios';
 import NavigationBar from './NavigationBar.jsx';
 import SideBar from './SideBar.jsx';
 
+import About from './About.jsx';
+import Experience from './Experience.jsx';
+import Work from './Work.jsx';
+import Contact from './Contact.jsx';
+import Resume from './Resume.jsx';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -15,11 +21,11 @@ class App extends React.Component {
       <div className="app">
         <NavigationBar/>
         <SideBar/>
-        <div className="about" name="about">About</div>
-        <div className="experience" name="experience">Experience</div>
-        <div className="work" name="work">Work</div>
-        <div className="contact" name="contact">Contact</div>
-        <a className="resume" name="resume">Resume</a>
+        <About />
+        <Experience />
+        <Work />
+        <Contact />
+        <Resume />
       </div>
     )
   }
