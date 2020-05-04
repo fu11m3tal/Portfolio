@@ -1,13 +1,16 @@
 import React from 'react';
 import axios from 'axios';
-import NavigationBar from './NavigationBar.jsx';
-import SideBar from './SideBar.jsx';
+// import NavigationBar from './Old/NavigationBar.jsx';
+// import SideBar from './Old/SideBar.jsx';
 
-import About from './About.jsx';
-import Experience from './Experience.jsx';
-import Work from './Work.jsx';
-import Contact from './Contact.jsx';
-import Resume from './Resume.jsx';
+// import About from './Old/About.jsx';
+// import Experience from './Old/Experience.jsx';
+// import Work from './Old/Work.jsx/index.js';
+// import Contact from './Old/Contact.jsx';
+// import Resume from './Old/Resume.jsx';
+import Navigation from './Navigation.jsx';
+import Cards from './Cards.jsx';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -19,13 +22,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <NavigationBar/>
-        <SideBar/>
-        <About />
-        <Experience />
-        <Work />
-        <Contact />
-        <Resume />
+        <Cards />
+        <Navigation />
       </div>
     )
   }
