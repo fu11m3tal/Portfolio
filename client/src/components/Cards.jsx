@@ -54,11 +54,13 @@ export default function Cards() {
   };
 
   const data = {
+    title: "title",
     name: "Photos",
+    date: "date",
+    description: "descrption goes here",
     url: "https://github.com/random-math-lab/Photo_Gallery",
-    description: "",
-    image: "https://avatars1.githubusercontent.com/u/54334975?s=200&v=4",
-    icon: "https://avatars1.githubusercontent.com/u/54334975?s=200&v=4"
+    background: "https://avatars1.githubusercontent.com/u/54334975?s=200&v=4",
+    icon: "https://avatars1.githubusercontent.com/u/54334975?s=200&v=4",
   };
 
   return (
@@ -74,18 +76,17 @@ export default function Cards() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={data.title}
+        subheader={data.date}
       />
       <CardMedia
         className={classes.media}
-        image={data.image}
+        image={data.background}
         title={data.name}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook together with your
-          guests. Add 1 cup of frozen peas along with the mussels, if you like.
+          {data.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
