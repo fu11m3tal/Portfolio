@@ -1,4 +1,4 @@
-const { Users } = require('../models/model.js');
+const { Userss } = require('../models/model.js');
 
 
 exports.getFriends = (req, res) =>  {
@@ -9,19 +9,22 @@ exports.getFriends = (req, res) =>  {
     },
     michael: {
       user: "michael", 
-      img: "/img/IMG_1676.jpeg"
+      img: "/img/IMG_7391.jpeg"
     }, 
     dc: {
       user: 'dc', 
-      img: "/img/IMG_7391.jpeg"
+      img: "/img/IMG_1676.jpeg"
     }
   }
   res.send(friends);
 }
 
 exports.getMessages = (req, res) =>  {
-  var messages = [{user: "dc", message: "hello", status: "unread"}, {user: "michael", message: "hello", status: "read"}, {user: "dc", message: "hello", status: "unread"}, {user: "steven", message: "fartttt", status: "unread"}];
-
-  res.send(messages);
+  var messages = [{room: 0, users: ["dc"], message: "hello", status: "unread"}, {room: 1, users: ["michael"], message: "hello", status: "read"}, {room: 0, users: ["dc"], message: "hello", status: "unread"}, {room: 1, users: ["steven"], message: "fartttt", status: "unread"}];
+  var data = {};
+  messages.forEach((message, index) => (
+    data[index] = message
+  ))
+  res.send(data);
 }
 

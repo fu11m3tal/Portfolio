@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import BadgeNotification from './BadgeNotification.jsx';
+import RoomsList from './RoomsList.jsx';
 import FriendsList from './FriendsList.jsx';
 import Messenger from './Messenger.jsx'; 
 class App extends React.Component {
@@ -12,8 +12,8 @@ class App extends React.Component {
         friends: {},
       },
       rooms: { 
-        1: { friends: ["michael"], messages: []}, 
-        2: { friends: ["dc"], messages: []}
+        0: { users: ["michael", "dc"], messages: []}, 
+        1: { users: ["dc"], messages: []}
       },
       messages: [],
       unread: [],
@@ -181,14 +181,11 @@ class App extends React.Component {
   
   render() {
     var { account, rooms , messages } = this.state;
-    var roomsList = Object.values(rooms)
     var { friends } = account;
     return (
       <div className="app">
         <button onClick={() => {console.log(this.state)}}>state</button>
-        {roomsList.map((room, index) => (
-          <Messenger key={index} friends={friends} room={room} messages={messages}/> 
-        ))}
+        <RoomsList rooms={rooms} friends={friends} messages={messages}/>
         <FriendsList friends={friends}/>
       </div>
     )
