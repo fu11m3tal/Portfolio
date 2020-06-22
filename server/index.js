@@ -10,13 +10,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('/resume/', controller.getResume);
-
-app.get('/linkedin/', controller.getLinkedIn)
-// app.get('/api/account/', controller.getAllAccount);
-// app.post('/workouts', controller.postWorkout);
-// app.put('/workouts');
-// app.delete('/workouts');
+app.get('/api/user/friends', controller.getFriends)
+app.get('/api/user/messages', controller.getMessages)
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
